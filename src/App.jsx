@@ -63,6 +63,8 @@ function App() {
   const table = useMantineReactTable({
     columns,
     data,
+    enableRowNumbers: true,
+    rowNumberDisplayMode: "original",
     initialState: { pagination: { pageSize: 5, pageIndex: 0 } },
   });
 
