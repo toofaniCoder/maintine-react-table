@@ -18,6 +18,7 @@ function App() {
       {
         accessorKey: "email",
         header: "E-mail Address",
+        enableClickToCopy: false,
       },
 
       {
@@ -63,6 +64,7 @@ function App() {
   const table = useMantineReactTable({
     columns,
     data,
+    enableClickToCopy: true,
     initialState: { pagination: { pageSize: 5, pageIndex: 0 } },
   });
 
