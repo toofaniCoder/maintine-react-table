@@ -63,7 +63,14 @@ function App() {
   const table = useMantineReactTable({
     columns,
     data,
-    initialState: { pagination: { pageSize: 5, pageIndex: 0 } },
+    enableStickyHeader: true,
+    enableStickyFooter: true,
+    mantineTableContainerProps: {
+      style: {
+        maxHeight: "500px",
+      },
+    },
+    // initialState: { pagination: { pageSize: 5, pageIndex: 0 } },
   });
 
   return (
@@ -78,7 +85,7 @@ function App() {
           justifyContent: "center",
         }}
       >
-        <div style={{ width: "80%", height: "70%" }}>
+        <div style={{ width: "80%" }}>
           <MantineReactTable table={table} />
         </div>
       </div>
